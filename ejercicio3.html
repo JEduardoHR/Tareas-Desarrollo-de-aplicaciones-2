@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>formulario</title>
+	<style>
+		.container{
+		background-color: #EFEFEF;
+		width: 350px;
+		box-sizing: border-box;
+		padding: 3rem 0;
+		box-shadow: 0 0 .5rem #8A8C8C;
+
+	}
+	</style>
+<script type="text/javascript">
+	
+	function soloNumeros(e){
+
+		var key = window.Event ? e.which : e.keyCode;
+		return (key >= 48 && key <= 57 || key ==45 || key ==40 || key ==41);
+	}
+	function soloFecha(e){
+
+		var key = window.Event ? e.which : e.keyCode;
+		return (key >= 48 && key <= 57 || key ==47);
+	}
+
+	function soloAltura(e){
+
+		var key = window.Event ? e.which : e.keyCode;
+		return (key >= 48 && key <= 57 || key ==46);
+	}
+	function soloLetras(e){
+
+		var key = window.Event ? e.which : e.keyCode;
+		return (key >= 97 && key <= 122 || key ==32);
+	}
+
+</script>
+</head>
+
+<body>
+	<section>
+	<center>
+	
+	
+			<table class="container" align="center">
+			<td>Nombre</td>
+			<td><input  type="text"  value="" onkeypress="return soloLetras(event)" /></td>
+			<br>
+			<tr></tr>
+			<td>Telefono</td>
+			<td><input  type="text"  value="" onkeypress="return soloNumeros(event)" /></td>
+			<br>
+			<tr></tr>
+			<td>Fecha de nacimiento</td>
+			<td><input  type="text" value"" onkeypress="return soloFecha(event)" /></td>
+			<br>
+			<tr></tr>
+			<td>Estatura</td>
+			<td><input  type="text" value"" onkeypress="return soloAltura(event)" /></td>
+			</table>
+
+		
+	
+</center>
+</section>
+
+</body>
+</html>
